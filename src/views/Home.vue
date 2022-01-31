@@ -2,12 +2,20 @@
   <div class="box">
     Tinyteam<br />
     Author: Rend
-
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
+
+import { useTimer } from "./../store";
+const [timer, setTimer] = useTimer();
+
+console.log(timer.value);
+setTimer(false);
+console.log(timer.value);
+setTimer(true);
+console.log(timer.value);
 
 export default {
   name: "Home",
